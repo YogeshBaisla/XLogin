@@ -2,8 +2,7 @@ import { useState } from "react";
 
 export default function App() {
   const [obj, setObj] = useState({});
-  const [err, setErr] = useState(false);
-  const [logined,setLogined] = useState(false)
+  const [err, setErr] = useState("");
   const changeHandler = (e) => {
     // const name = e.target.name;
     // const value = e.target.value;
@@ -14,10 +13,9 @@ export default function App() {
   const submitHandler = (e) => {
     e.preventDefault();
     if (obj["username"] === "user" && obj["password"] === "password") {
-      setErr(true);
+      setErr("Welcome, user");
     } else {
-      setErr(false);
-      setLogined(true)
+      setErr("Invalid username or password");
     }
   };
   return (
@@ -47,7 +45,7 @@ export default function App() {
         <br />
         <button>Submit</button>
       </form>
-      <p>{(err || logined) ? "Welcome, user" : "Invalid username or password"}</p>
+      <p>{err}</p>
     </>
   );
 }
