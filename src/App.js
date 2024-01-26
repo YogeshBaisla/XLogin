@@ -23,24 +23,24 @@ export default function App() {
       <form onSubmit={submitHandler}>
         <label htmlFor="username">
           UserName:
-          <input
+        </label>
+        <input
             id="username"
             onChange={changeHandler}
             name="username"
             type="text"
           />
-        </label>
         <br />
         <br />
         <label htmlFor="password">
           Password:
-          <input
+        </label>
+        <input
             id="password"
             name="password"
             onChange={changeHandler}
             type="password"
           />
-        </label>
         <br />
         <br />
         <button>Submit</button>
