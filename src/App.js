@@ -47,7 +47,7 @@ export default function App() {
         <br />
         <button>Submit</button>
       </form>
-      <p>{err || logined ? "Welcome, user" : "Invalid username or password"}</p>
+      <p>{(err || logined) ? "Welcome, user" : "Invalid username or password"}</p>
     </>
   );
 }
