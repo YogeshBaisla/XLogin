@@ -22,7 +22,7 @@ export default function App() {
     <>
       <form onSubmit={submitHandler}>
         <label htmlFor="username">
-          UserName:
+          Username:
         </label>
         <input
             id="username"
