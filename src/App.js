@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function App() {
   const [obj, setObj] = useState({});
   const [err, setErr] = useState(false);
+  const [logined,setLogined] = useState(false)
   const changeHandler = (e) => {
     // const name = e.target.name;
     // const value = e.target.value;
@@ -16,6 +17,7 @@ export default function App() {
       setErr(true);
     } else {
       setErr(false);
+      setLogined(true)
     }
   };
   return (
@@ -45,7 +47,7 @@ export default function App() {
         <br />
         <button>Submit</button>
       </form>
-      <p>{err ? "Welcome user" : ""}</p>
+      <p>{err || logined ? "Welcome, user" : "Invalid username or password"}</p>
     </>
   );
 }
